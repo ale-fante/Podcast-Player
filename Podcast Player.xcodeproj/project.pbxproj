@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		BCE22F6E228B22AB0005037A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F6D228B22AB0005037A /* AppDelegate.swift */; };
-		BCE22F70228B22AB0005037A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F6F228B22AB0005037A /* ViewController.swift */; };
 		BCE22F73228B22AB0005037A /* Podcast_Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F71228B22AB0005037A /* Podcast_Player.xcdatamodeld */; };
 		BCE22F75228B22AF0005037A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE22F74228B22AF0005037A /* Assets.xcassets */; };
 		BCE22F78228B22AF0005037A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE22F76228B22AF0005037A /* Main.storyboard */; };
+		BCE22F81228B5CA60005037A /* PodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F80228B5CA60005037A /* PodcastViewController.swift */; };
+		BCE22F85228B71010005037A /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F84228B71010005037A /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BCE22F6A228B22AB0005037A /* Podcast Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Podcast Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE22F6D228B22AB0005037A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCE22F6F228B22AB0005037A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCE22F72228B22AB0005037A /* Podcast_Player.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Podcast_Player.xcdatamodel; sourceTree = "<group>"; };
 		BCE22F74228B22AF0005037A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE22F77228B22AF0005037A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCE22F79228B22AF0005037A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE22F7A228B22AF0005037A /* Podcast_Player.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podcast_Player.entitlements; sourceTree = "<group>"; };
+		BCE22F80228B5CA60005037A /* PodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewController.swift; sourceTree = "<group>"; };
+		BCE22F84228B71010005037A /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				BCE22F6D228B22AB0005037A /* AppDelegate.swift */,
-				BCE22F6F228B22AB0005037A /* ViewController.swift */,
+				BCE22F80228B5CA60005037A /* PodcastViewController.swift */,
+				BCE22F84228B71010005037A /* Parser.swift */,
 				BCE22F74228B22AF0005037A /* Assets.xcassets */,
 				BCE22F76228B22AF0005037A /* Main.storyboard */,
 				BCE22F79228B22AF0005037A /* Info.plist */,
@@ -136,8 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE22F85228B71010005037A /* Parser.swift in Sources */,
+				BCE22F81228B5CA60005037A /* PodcastViewController.swift in Sources */,
 				BCE22F73228B22AB0005037A /* Podcast_Player.xcdatamodeld in Sources */,
-				BCE22F70228B22AB0005037A /* ViewController.swift in Sources */,
 				BCE22F6E228B22AB0005037A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +279,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Podcast Player/Podcast_Player.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JT58Z7RC6J;
@@ -294,7 +297,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Podcast Player/Podcast_Player.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JT58Z7RC6J;
