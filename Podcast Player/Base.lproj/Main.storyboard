@@ -789,9 +789,8 @@
                                                             <rect key="frame" x="1" y="1" width="293" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdM-Wh-Ljt">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="293" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdM-Wh-Ljt">
+                                                                    <rect key="frame" x="1" y="0.0" width="96" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="h5t-ow-xUW">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -799,6 +798,9 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="HdM-Wh-Ljt" firstAttribute="leading" secondItem="dyc-MY-oJE" secondAttribute="leading" constant="3" id="Que-V5-EYX"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="HdM-Wh-Ljt" id="TPI-UZ-gg1"/>
                                                             </connections>

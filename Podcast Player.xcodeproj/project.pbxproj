@@ -13,6 +13,8 @@
 		BCE22F78228B22AF0005037A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE22F76228B22AF0005037A /* Main.storyboard */; };
 		BCE22F81228B5CA60005037A /* PodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F80228B5CA60005037A /* PodcastViewController.swift */; };
 		BCE22F85228B71010005037A /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F84228B71010005037A /* Parser.swift */; };
+		BCE22F8D228B76060005037A /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F8B228B76060005037A /* SWXMLHash.swift */; };
+		BCE22F8E228B76060005037A /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F8C228B76060005037A /* XMLIndexer+XMLIndexerDeserializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		BCE22F7A228B22AF0005037A /* Podcast_Player.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podcast_Player.entitlements; sourceTree = "<group>"; };
 		BCE22F80228B5CA60005037A /* PodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewController.swift; sourceTree = "<group>"; };
 		BCE22F84228B71010005037A /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		BCE22F8B228B76060005037A /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
+		BCE22F8C228B76060005037A /* XMLIndexer+XMLIndexerDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XMLIndexer+XMLIndexerDeserializable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 		BCE22F6C228B22AB0005037A /* Podcast Player */ = {
 			isa = PBXGroup;
 			children = (
+				BCE22F8A228B76060005037A /* SWXMLHash */,
 				BCE22F6D228B22AB0005037A /* AppDelegate.swift */,
 				BCE22F80228B5CA60005037A /* PodcastViewController.swift */,
 				BCE22F84228B71010005037A /* Parser.swift */,
@@ -67,6 +72,15 @@
 				BCE22F71228B22AB0005037A /* Podcast_Player.xcdatamodeld */,
 			);
 			path = "Podcast Player";
+			sourceTree = "<group>";
+		};
+		BCE22F8A228B76060005037A /* SWXMLHash */ = {
+			isa = PBXGroup;
+			children = (
+				BCE22F8B228B76060005037A /* SWXMLHash.swift */,
+				BCE22F8C228B76060005037A /* XMLIndexer+XMLIndexerDeserializable.swift */,
+			);
+			path = SWXMLHash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE22F85228B71010005037A /* Parser.swift in Sources */,
+				BCE22F8E228B76060005037A /* XMLIndexer+XMLIndexerDeserializable.swift in Sources */,
 				BCE22F81228B5CA60005037A /* PodcastViewController.swift in Sources */,
 				BCE22F73228B22AB0005037A /* Podcast_Player.xcdatamodeld in Sources */,
+				BCE22F8D228B76060005037A /* SWXMLHash.swift in Sources */,
 				BCE22F6E228B22AB0005037A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

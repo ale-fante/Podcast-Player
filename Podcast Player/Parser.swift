@@ -10,7 +10,10 @@ import Foundation
 
 
 class Parser {
-    func getPodcastMataData(data:Data) {
+    func getPodcastMataData(data:Data) -> String? {
         print("WOHOOO")
+        let xml = SWXMLHash.parse(data)
+
+        return xml["rss"]["channel"]["title"].element?.text
     }
 }

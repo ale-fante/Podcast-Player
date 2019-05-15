@@ -29,11 +29,16 @@ class PodcastViewController: NSViewController {
                 } else{
                     if data != nil{
                         let parser = Parser()
-                        parser.getPodcastMataData(data: data!)
+                        if let title = parser.getPodcastMataData(data: data!) {
+                            print(title)
+                        }
                     }
                     
                 }
                 }.resume()
+            
+            // Clear input text field
+            self.podcastURLTextField.stringValue = ""
         }
     }
 }
