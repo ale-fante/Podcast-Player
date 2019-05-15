@@ -10,10 +10,12 @@ import Foundation
 
 
 class Parser {
-    func getPodcastMataData(data:Data) -> String? {
-        print("WOHOOO")
-        let xml = SWXMLHash.parse(data)
+    func getPodcastMataData(data:Data) -> (title:String?, imageURL:String?) {
 
+        let xml = SWXMLHash.parse(data)
+        
+        print(xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text ?? <#default value#>)
+        
         return xml["rss"]["channel"]["title"].element?.text
     }
 }
