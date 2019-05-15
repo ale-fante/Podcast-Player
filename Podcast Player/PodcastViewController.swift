@@ -27,11 +27,9 @@ class PodcastViewController: NSViewController {
                     print("BIG FAIL")
                     
                 } else{
-                    if data != nil{
+                    if data != nil {
                         let parser = Parser()
-                        if let title = parser.getPodcastMataData(data: data!) {
-                            print(title)
-                        }
+                        let info = parser.getPodcastMataData(data: data!)
                     }
                     
                 }
