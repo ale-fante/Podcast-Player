@@ -19,12 +19,38 @@ class Parser {
         return (xml["rss"]["channel"]["title"].element?.text, xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text)
     }
     
-    func getEpisodes(data:Data) -> [Episode] {
+    func getEpisodes(data: Data) -> [Episode] {
         
         let xml = SWXMLHash.parse(data)
         
-        print(xml)
+        var episodes : [Episode] = []
         
-        return []
+        for item in xml["rss"]["channel"]["item"].all {
+            print(item["title"])
+            
+            let episode = Episode()
+            if let title = item["title"].element?.text {
+                episode.title = title
+            }
+            
+
+            if let htmlDescription = item["description"].element?.text {
+                episode.htmlDescription = htmlDescription
+            }
+            
+            if let audioURL = item["link"].element?.text {
+                episode.audioURL = audioURL
+            }
+            
+            if let pubDate = item["pubDate"].element?.text {
+                if let date = Episode.formatter.date(from: pubDate) {
+                    episode.pubDate = date
+                }
+            }
+            episodes.append(episode)
+            print(episode.pubDate)
+        }
+        
+        return episodes
     }
 }
