@@ -20,6 +20,8 @@ class EpisodesViewController: NSViewController {
     
     var podcast : Podcast? = nil
     
+    var podcastsVC : PodcastViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -28,10 +30,38 @@ class EpisodesViewController: NSViewController {
     func updateView() {
         if podcast != nil {
             titleLabel.stringValue = podcast!.title!
+        } else {
+            titleLabel.stringValue = ""
         }
+        
+        if podcast?.imageURL != nil {
+            
+            let image = NSImage(byReferencing: URL(string: podcast!.imageURL!)!)
+            imageView.image = image
+        } else {
+            imageView.image = nil
+        }
+        
+        pausePlayButton.isHidden = true
     }
     
     @IBAction func deleteClicked(_ sender: Any) {
+        
+        if podcast != nil{
+            if let context = (NSApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                
+                context.delete(podcast!)
+                
+                (NSApplication.shared.delegate as? AppDelegate)?.saveAction(nil)
+                
+                podcastsVC?.getPodcasts()
+                
+                podcast = nil
+                updateView()
+            }
+        }
+        
+        
     }
     
     
