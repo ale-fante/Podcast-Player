@@ -70,15 +70,16 @@ class PodcastViewController: NSViewController, NSTableViewDataSource, NSTableVie
                                 (NSApplication.shared.delegate as? AppDelegate)?.saveAction(nil)
                                 
                                 self.getPodcasts()
+                                DispatchQueue.main.async {
+                                    // Clear input text field
+                                    self.podcastURLTextField.stringValue = ""
+                                }
                             }
                         }
                     }
                     
                 }
                 }.resume()
-            
-            // Clear input text field
-            self.podcastURLTextField.stringValue = ""
         }
         
     }

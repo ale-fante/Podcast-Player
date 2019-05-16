@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BCB6ADCD228CC5FD00A581A8 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6ADCC228CC5FD00A581A8 /* EpisodesViewController.swift */; };
 		BCB6ADCF228DAA8800A581A8 /* TheSplitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6ADCE228DAA8800A581A8 /* TheSplitController.swift */; };
+		BCB6ADD1228DFE5800A581A8 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6ADD0228DFE5800A581A8 /* Episode.swift */; };
 		BCE22F6E228B22AB0005037A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F6D228B22AB0005037A /* AppDelegate.swift */; };
 		BCE22F73228B22AB0005037A /* Podcast_Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCE22F71228B22AB0005037A /* Podcast_Player.xcdatamodeld */; };
 		BCE22F75228B22AF0005037A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE22F74228B22AF0005037A /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		BCB6ADCC228CC5FD00A581A8 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		BCB6ADCE228DAA8800A581A8 /* TheSplitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSplitController.swift; sourceTree = "<group>"; };
+		BCB6ADD0228DFE5800A581A8 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		BCE22F6A228B22AB0005037A /* Podcast Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Podcast Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE22F6D228B22AB0005037A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE22F72228B22AB0005037A /* Podcast_Player.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Podcast_Player.xcdatamodel; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				BCB6ADCC228CC5FD00A581A8 /* EpisodesViewController.swift */,
 				BCB6ADCE228DAA8800A581A8 /* TheSplitController.swift */,
 				BCE22F84228B71010005037A /* Parser.swift */,
+				BCB6ADD0228DFE5800A581A8 /* Episode.swift */,
 				BCE22F76228B22AF0005037A /* Main.storyboard */,
 				BCE22F74228B22AF0005037A /* Assets.xcassets */,
 				BCE22F79228B22AF0005037A /* Info.plist */,
@@ -166,6 +169,7 @@
 				BCB6ADCF228DAA8800A581A8 /* TheSplitController.swift in Sources */,
 				BCE22F73228B22AB0005037A /* Podcast_Player.xcdatamodeld in Sources */,
 				BCE22F8D228B76060005037A /* SWXMLHash.swift in Sources */,
+				BCB6ADD1228DFE5800A581A8 /* Episode.swift in Sources */,
 				BCE22F6E228B22AB0005037A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
