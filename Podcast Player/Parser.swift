@@ -13,8 +13,7 @@ class Parser {
     func getPodcastMataData(data:Data) -> (title:String?, imageURL:String?) {
 
         let xml = SWXMLHash.parse(data)
-        
-        print(xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text as Any)
+        //print(xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text as Any)
         
         return (xml["rss"]["channel"]["title"].element?.text, xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text)
     }
@@ -40,6 +39,8 @@ class Parser {
             
             if let audioURL = item["link"].element?.text {
                 episode.audioURL = audioURL
+                
+                print("CHINGUADOS", audioURL)
             }
             
             if let pubDate = item["pubDate"].element?.text {

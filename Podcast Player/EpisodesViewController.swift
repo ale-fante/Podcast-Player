@@ -91,6 +91,13 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
     
     
     @IBAction func pausePlayClicked(_ sender: Any) {
+        if pausePlayButton.title == "Pause" {
+            player?.pause()
+            pausePlayButton.title = "Play"
+        } else {
+            player?.pause()
+            pausePlayButton.title = "Pause"
+        }
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -105,16 +112,25 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         return cell
     }
     
+    
     func tableViewSelectionDidChange(_ notification: Notification) {
         if tableView.selectedRow >= 0 {
-            
+
             let episode = episodes[tableView.selectedRow]
-            
+            print("EPISODE URL SIMON!")
+            print("Es este", episode.audioURL)
+
             if let url = URL(string: episode.audioURL) {
+                print("IT GETS HERE")
+                player?.pause()
+                player = nil
+                print("IT GETS HERE TOO")
                 player = AVPlayer(url: url)
                 player?.play()
             }
             
+            pausePlayButton.isHidden = false
+            pausePlayButton.title = "Pause"
         }
     }
 }
