@@ -910,13 +910,13 @@
                                     <action selector="pausePlayClicked:" target="h2C-uK-2e2" id="G8j-4w-rKh"/>
                                 </connections>
                             </button>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2N-z7-Od5">
-                                <rect key="frame" x="0.0" y="0.0" width="687" height="212"/>
+                            <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="100" horizontalPageScroll="10" verticalLineScroll="100" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2N-z7-Od5">
+                                <rect key="frame" x="0.0" y="2" width="687" height="212"/>
                                 <clipView key="contentView" id="Re2-ez-zyh">
                                     <rect key="frame" x="1" y="0.0" width="685" height="211"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="r8w-ha-IE1" viewBased="YES" id="1Zn-F6-Pzg">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="98" rowSizeStyle="automatic" headerView="r8w-ha-IE1" viewBased="YES" id="1Zn-F6-Pzg">
                                             <rect key="frame" x="0.0" y="0.0" width="687" height="186"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -936,23 +936,23 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="episodeCell" id="toI-uD-BgY">
-                                                            <rect key="frame" x="1" y="1" width="684" height="17"/>
+                                                        <tableCellView identifier="episodeCell" misplaced="YES" id="toI-uD-BgY" customClass="EpisodeCell" customModule="Podcast_Player" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="684" height="98"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-EM-ug9">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="684" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="gLI-eg-YRS">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-CR-2K6">
+                                                                    <rect key="frame" x="1" y="78" width="147" height="17"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" title="Label" id="tFf-WF-awT">
+                                                                        <font key="font" size="12" name=".AppleSystemUIFontBold"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
-                                                            <connections>
-                                                                <outlet property="textField" destination="kJy-EM-ug9" id="8hm-yX-ShX"/>
-                                                            </connections>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="H8C-CR-2K6" secondAttribute="bottom" constant="112" id="OmG-R3-pPy"/>
+                                                                <constraint firstItem="H8C-CR-2K6" firstAttribute="top" secondItem="toI-uD-BgY" secondAttribute="top" constant="20" id="hxg-b0-G6S"/>
+                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>

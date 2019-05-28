@@ -95,7 +95,7 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
             player?.pause()
             pausePlayButton.title = "Play"
         } else {
-            player?.pause()
+            player?.play()
             pausePlayButton.title = "Pause"
         }
     }
@@ -117,14 +117,12 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         if tableView.selectedRow >= 0 {
 
             let episode = episodes[tableView.selectedRow]
-            print("EPISODE URL SIMON!")
-            print("Es este", episode.audioURL)
 
             if let url = URL(string: episode.audioURL) {
-                print("IT GETS HERE")
+    
                 player?.pause()
                 player = nil
-                print("IT GETS HERE TOO")
+
                 player = AVPlayer(url: url)
                 player?.play()
             }
